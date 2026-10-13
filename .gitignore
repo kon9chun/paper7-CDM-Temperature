@@ -1,0 +1,11 @@
+# Large data files (exceed GitHub's 100 MB per-file limit)
+# The full dataset and prediction arrays are not tracked.
+ydata.npy
+sp5_pred.npy
+val_ydata.npy
+val_sp9_reconstructed.npy
+
+# Local tool configs and caches
+__pycache__/
+*.pyc
+.claude/
