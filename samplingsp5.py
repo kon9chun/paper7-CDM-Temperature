@@ -66,7 +66,7 @@ diffusion=DiffusionModel(
     device=device
 )
 
-diffusion.load('final_model_sp5.pt')
+diffusion.load('final_model_sp5_0319.pt')
 
 diffusion.model.eval()
 y_true=np.empty((0,40,240))

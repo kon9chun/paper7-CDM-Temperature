@@ -35,7 +35,11 @@ diffusion model (U-Net denoiser + time embedding + condition embedding).
 ├── *_rmse.npy                # Per-sample RMSE results (sp3/sp5/sp9/noise/mlp)
 ├── linear/                   # Linear-interpolation baseline & RMSE analysis
 ├── 数据分析/fig1~fig3/        # Analysis scripts and figures (data-analysis)
-└── final_model*.pt, mlp_sp9.pth   # Model checkpoints (Git LFS, see below)
+├── final_model.pt            # CDM checkpoint, 9 sampling points
+├── final_model_sp5_0319.pt   # CDM checkpoint, 5 sampling points
+├── final_model_sp3_0320.pt   # CDM checkpoint, 3 sampling points
+└── mlp_sp9.pth               # MLP baseline checkpoint
+                              # (all tracked with Git LFS, see below)
 ```
 
 ## Requirements | 环境依赖
@@ -93,8 +97,9 @@ git lfs pull
 
 ## Large Files | 大文件说明
 
-- Model checkpoints (`final_model*.pt`, `mlp_sp9.pth`, ~1.3 GB total) are tracked with
-  **Git LFS**. Run `git lfs pull` after cloning to download them.
+- Model checkpoints (`final_model.pt`, `final_model_sp5_0319.pt`, `final_model_sp3_0320.pt`,
+  `mlp_sp9.pth`, ~0.85 GB total) are tracked with **Git LFS**. Run `git lfs pull` after
+  cloning to download them.
 - The full dataset `ydata.npy` (~3.4 GB) and prediction arrays (`sp5_pred.npy`, etc.)
   exceed GitHub's 100 MB per-file limit and are **not included**. They are available
   from the authors on reasonable request.

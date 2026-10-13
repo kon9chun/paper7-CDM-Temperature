@@ -5,6 +5,11 @@ sp5_pred.npy
 val_ydata.npy
 val_sp9_reconstructed.npy
 
+# Deprecated checkpoints: superseded by the date-suffixed versions
+# (final_model_sp3_0320.pt / final_model_sp5_0319.pt)
+final_model_sp3.pt
+final_model_sp5.pt
+
 # Local tool configs and caches
 __pycache__/
 *.pyc
